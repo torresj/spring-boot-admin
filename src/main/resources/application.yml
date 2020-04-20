@@ -1,0 +1,23 @@
+spring:
+  #Spring security credentials
+  security:
+    user:
+      name: ${USER_NAME}
+      password: ${USER_PASSWORD}
+
+  #configs to give secured server info
+  boot:
+    admin:
+      client:
+        instance:
+          metadata:
+            user:
+              name: ${spring.security.user.name}
+              password: ${spring.security.user.password}
+      #Telegram notifications
+      notify:
+        custom:
+          telegram:
+            enabled: ${TELEGRAM_ENABLED:false}
+            auth-token: ${TELEGRAM_TOKEN}
+            chat-id: ${TELEGRAM_CHAT_ID}

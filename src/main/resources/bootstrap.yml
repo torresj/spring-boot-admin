@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME:spring-boot-admin-server}
+  cloud:
+    config:
+      uri: ${SPRING_CLOUD_CONFIG_URL}
+      username: ${SPRING_CLOUD_CONFIG_USERNAME}
+      password: ${SPRING_CLOUD_CONFIG_PASSWORD}
